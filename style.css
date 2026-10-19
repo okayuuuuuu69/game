@@ -1,0 +1,392 @@
+/* ====================== */
+/* ページ全体 */
+/* ====================== */
+
+html,
+body {
+
+    margin:0;
+    padding:0;
+
+    width:100%;
+    height:100%;
+
+    font-family:"Yu Gothic";
+
+    background:#f5f5f5;
+
+    overflow:hidden;
+
+}
+
+
+/* ====================== */
+/* 左右全体 */
+/* ====================== */
+
+#gameArea {
+
+    display:flex;
+
+    width:100%;
+    height:100vh;
+
+}
+
+
+/* ====================== */
+/* 左：漢字エリア */
+/* ====================== */
+
+#boardArea {
+
+    flex:1;
+
+    height:100vh;
+
+    overflow-y:auto;
+    overflow-x:hidden;
+
+    padding:20px 30px;
+
+    box-sizing:border-box;
+
+}
+
+
+#boardArea h1 {
+
+    margin:10px 0 20px;
+
+}
+
+
+/* ====================== */
+/* 漢字一覧 */
+/* ====================== */
+
+#board {
+
+    margin:20px auto;
+
+    max-width:1100px;
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:8px;
+
+    justify-content:center;
+
+}
+
+
+/* ====================== */
+/* 通常の漢字セル */
+/* ====================== */
+
+.cell {
+
+    width:45px;
+
+    height:45px;
+
+    background:white;
+
+    border:2px solid #777;
+
+    font-size:30px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    box-sizing:border-box;
+
+}
+
+
+.empty {
+
+    color:#aaa;
+
+}
+
+
+/* ====================== */
+/* 小学生全部・常用漢字 */
+/* ====================== */
+
+.allStudentCell {
+
+    width:70px;
+
+    height:70px;
+
+    box-sizing:border-box;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:35px;
+
+    overflow:hidden;
+
+}
+
+
+/* 「1年」「2年」「常用」 */
+
+.gradeLabel {
+
+    font-size:15px;
+
+    line-height:20px;
+
+    color:#555;
+
+}
+
+
+/* 空欄部分 */
+
+.blank {
+
+    width:45px;
+
+    height:35px;
+
+}
+
+
+/* ====================== */
+/* 右：操作エリア */
+/* ====================== */
+
+#controlArea {
+
+    width:320px;
+
+    height:100vh;
+
+    box-sizing:border-box;
+
+    padding:25px 20px;
+
+    background:#ffffff;
+
+    border-left:2px solid #ddd;
+
+    overflow-y:auto;
+
+}
+
+
+/* ====================== */
+/* 各操作ブロック */
+/* ====================== */
+
+.controlSection {
+
+    margin-bottom:25px;
+
+}
+
+
+.sectionTitle {
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    margin-bottom:10px;
+
+    color:#444;
+
+}
+
+
+/* ====================== */
+/* ボタン */
+/* ====================== */
+
+button {
+
+    font-size:18px;
+
+    padding:10px;
+
+    margin:5px;
+
+    border-radius:6px;
+
+    border:1px solid #aaa;
+
+    background:#eee;
+
+    cursor:pointer;
+
+}
+
+
+button:hover {
+
+    background:#ddd;
+
+}
+
+
+.selected {
+
+    background:#4caf50;
+
+    color:white;
+
+}
+
+
+/* ====================== */
+/* 学年ボタン */
+/* ====================== */
+
+#gradeArea button {
+
+    width:120px;
+
+}
+
+
+/* ====================== */
+/* タイマー */
+/* ====================== */
+
+#timer {
+
+    font-size:32px;
+
+    font-weight:bold;
+
+    text-align:center;
+
+    padding:15px 0;
+
+}
+
+
+/* ====================== */
+/* 進捗 */
+/* ====================== */
+
+#progressCount {
+
+    text-align:center;
+
+}
+
+
+.progressNumber {
+
+    font-size:36px;
+
+    font-weight:bold;
+
+}
+
+
+.progressSlash {
+
+    font-size:28px;
+
+    color:#777;
+
+}
+
+
+/* ====================== */
+/* 入力欄 */
+/* ====================== */
+
+#inputArea input {
+
+    width:100%;
+
+    height:60px;
+
+    box-sizing:border-box;
+
+    font-size:28px;
+
+    padding:10px;
+
+    border-radius:10px;
+
+    border:2px solid #aaa;
+
+    text-align:center;
+
+}
+
+
+/* ====================== */
+/* メッセージ */
+/* ====================== */
+
+#message {
+
+    font-size:22px;
+
+    text-align:center;
+
+    min-height:40px;
+
+}
+
+
+/* ====================== */
+/* スクロールバー */
+/* ====================== */
+
+#boardArea::-webkit-scrollbar {
+
+    width:12px;
+
+}
+
+
+#boardArea::-webkit-scrollbar-thumb {
+
+    background:#aaa;
+
+    border-radius:6px;
+
+}
+
+
+#boardArea::-webkit-scrollbar-track {
+
+    background:#eee;
+
+}
+
+#surrenderBtn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#surrenderBtn:hover {
+    background-color: #c0392b;
+}

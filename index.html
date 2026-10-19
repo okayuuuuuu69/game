@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>漢字コンプリート</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div id="gameArea">
+
+
+    <!-- ====================== -->
+    <!-- 左：漢字エリア -->
+    <!-- ====================== -->
+
+    <div id="boardArea">
+
+        <h1>漢字コンプリート</h1>
+
+        <h2 id="title"></h2>
+
+        <div id="board">
+        </div>
+
+    </div>
+
+
+    <!-- ====================== -->
+    <!-- 右：操作エリア -->
+    <!-- ====================== -->
+
+    <div id="controlArea">
+
+
+        <!-- モード選択 -->
+
+        <div class="controlSection">
+
+            <div class="sectionTitle">
+                モード選択
+            </div>
+
+
+            <div class="mode">
+
+                <button
+                    id="gradeModeBtn"
+                    onclick="selectMode('grade')">
+
+                    小学n年生
+
+                </button>
+
+
+                <button
+                    id="allStudentBtn"
+                    onclick="selectMode('allStudent')">
+
+                    小学生全部
+
+                </button>
+
+
+                <button
+                    id="commonBtn"
+                    onclick="selectMode('common')">
+
+                    常用漢字
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- 学年選択 -->
+
+        <div
+            id="gradeArea"
+            class="controlSection">
+
+            <div class="sectionTitle">
+                学年選択
+            </div>
+
+
+            <button
+                id="grade1Btn"
+                onclick="selectGrade(1)">
+
+                小学1年
+
+            </button>
+
+
+            <button
+                id="grade2Btn"
+                onclick="selectGrade(2)">
+
+                小学2年
+
+            </button>
+
+
+            <button
+                id="grade3Btn"
+                onclick="selectGrade(3)">
+
+                小学3年
+
+            </button>
+
+
+            <button
+                id="grade4Btn"
+                onclick="selectGrade(4)">
+
+                小学4年
+
+            </button>
+
+
+            <button
+                id="grade5Btn"
+                onclick="selectGrade(5)">
+
+                小学5年
+
+            </button>
+
+
+            <button
+                id="grade6Btn"
+                onclick="selectGrade(6)">
+
+                小学6年
+
+            </button>
+
+        </div>
+
+
+        <!-- 進捗 -->
+
+        <div
+            id="progressCount"
+            class="controlSection"
+            style="display:none;">
+
+            <div class="sectionTitle">
+                入力進捗
+            </div>
+
+
+            <div class="progressNumber">
+
+                <span id="completedCount">
+                    0
+                </span>
+
+                <span class="progressSlash">
+                    /
+                </span>
+
+                <span id="totalCount">
+                    0
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- タイマー -->
+
+        <div
+            id="timer"
+            class="controlSection">
+
+            00:00.000
+
+        </div>
+
+
+        <!-- 入力 -->
+
+        <div
+            id="inputArea"
+            class="controlSection"
+            style="display:none;">
+
+            <input
+                id="answerbox"
+                placeholder="文字を入力してゲームスタート">
+
+            <button id="surrenderBtn" onclick="surrenderGame()">
+                  降参
+            </button>
+
+        </div>
+
+
+        <!-- メッセージ -->
+
+        <div id="message">
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+<!--audio id="correct"
+src="correct.mp3"></audio>
+
+
+<audio id="wrong"
+src="wrong.mp3"></audio-->
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
